@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Metsa Essence | Handcrafted Furniture – Coming Soon</title>
+  <title>Metsa Essence | Handcrafted Furniture</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,173 +16,150 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
-      min-height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("https://images.unsplash.com/photo-1582582494700-1f8fdad47a83");
-      background-size: cover;
-      background-position: center;
+      font-family: 'Inter', sans-serif;
+      background: #f7f5f2;
+      color: #2e2a26;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
     }
 
-    .container {
+    .wrapper {
+      width: 100%;
       max-width: 720px;
-      padding: 50px 40px;
-      background: rgba(255, 250, 244, 0.96);
-      border-radius: 18px;
+      padding: 60px 40px;
+      background: #ffffff;
+      border-radius: 16px;
       text-align: center;
-      color: #4a3f35;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-      animation: scaleIn 1.2s ease forwards;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+      animation: fadeIn 1s ease;
     }
 
-    @keyframes scaleIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Logo */
-    .logo {
+    .brand {
       font-family: 'Playfair Display', serif;
-      font-size: 40px;
-      font-weight: 700;
-      color: #7a4a2e;
-      margin-bottom: 10px;
+      font-size: 38px;
+      font-weight: 600;
+      margin-bottom: 12px;
     }
 
     .tagline {
       font-size: 14px;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
+      color: #8a7d6c;
       text-transform: uppercase;
-      color: #9b7a5e;
-      margin-bottom: 30px;
-      opacity: 0;
-      animation: fadeSlide 1.8s ease forwards;
-      animation-delay: 0.5s;
-    }
-
-    @keyframes fadeSlide {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
+      margin-bottom: 36px;
     }
 
     .divider {
-      width: 90px;
-      height: 3px;
-      background: #c49a6c;
-      margin: 0 auto 35px;
-      border-radius: 10px;
+      width: 70px;
+      height: 2px;
+      background: #c4b6a3;
+      margin: 0 auto 40px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 46px;
+      font-size: 44px;
+      font-weight: 500;
       margin-bottom: 18px;
     }
 
     p {
       font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 35px;
-      color: #6b5b4f;
+      line-height: 1.7;
+      color: #5f5a54;
+      max-width: 520px;
+      margin: 0 auto 40px;
     }
 
-    /* Email form */
-    .notify-form {
+    .coming {
+      font-size: 15px;
+      letter-spacing: 3px;
+      color: #8a7d6c;
+      margin-bottom: 40px;
+    }
+
+    .notify {
       display: flex;
-      gap: 10px;
-      margin-bottom: 35px;
-      flex-wrap: wrap;
       justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 35px;
     }
 
-    .notify-form input {
-      padding: 14px;
+    .notify input {
+      padding: 14px 16px;
       width: 260px;
+      border: 1px solid #d6cec3;
       border-radius: 8px;
-      border: 1px solid #d3b89c;
       font-size: 14px;
     }
 
-    .notify-form button {
+    .notify button {
       padding: 14px 22px;
-      border: none;
       border-radius: 8px;
-      background: #7a4a2e;
-      color: #fff;
+      border: none;
+      background: #2e2a26;
+      color: #ffffff;
       font-size: 14px;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
-    .notify-form button:hover {
-      background: #5f3723;
+    .notify button:hover {
+      background: #1f1c19;
     }
 
-    .coming-soon {
-      font-size: 18px;
-      letter-spacing: 4px;
-      color: #7a4a2e;
-      animation: glow 2.5s ease-in-out infinite alternate;
-      margin-bottom: 30px;
-    }
-
-    @keyframes glow {
-      from { opacity: 0.65; }
-      to { opacity: 1; }
-    }
-
-    /* Social buttons */
     .socials {
       display: flex;
       justify-content: center;
       gap: 18px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .socials a {
       text-decoration: none;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 30px;
       font-size: 14px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .whatsapp {
-      background: #25d366;
-    }
-
-    .instagram {
-      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #2e2a26;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
     }
 
     .socials a:hover {
-      transform: translateY(-3px);
-      opacity: 0.9;
+      border-color: #2e2a26;
     }
 
     footer {
       font-size: 13px;
-      color: #8b7a6b;
+      color: #9a948b;
     }
 
     @media (max-width: 480px) {
-      h1 { font-size: 34px; }
-      .logo { font-size: 30px; }
-      .container { padding: 40px 25px; }
+      .wrapper {
+        padding: 45px 25px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .brand {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-    <div class="logo">Metsa Essence</div>
+  <div class="wrapper">
+    <div class="brand">Metsa Essence</div>
 
     <div class="tagline">
       Where Craftsmanship Meets Timeless Living
@@ -193,23 +170,21 @@
     <h1>Coming Soon</h1>
 
     <p>
-      Thoughtfully handcrafted furniture made by skilled artisans.
-      Rooted in tradition and refined for modern living —
-      each piece tells a story of craftsmanship and care.
+      Metsa Essence brings thoughtfully handcrafted furniture shaped by skilled
+      artisans. Each piece is rooted in tradition and refined for contemporary
+      living.
     </p>
 
-    <!-- Notify Form -->
-    <form class="notify-form" onsubmit="event.preventDefault(); alert('Thank you! We will notify you soon.');">
-      <input type="email" placeholder="Enter your email" required />
+    <div class="coming">Launching Soon</div>
+
+    <form class="notify" onsubmit="event.preventDefault(); alert('Thank you! We’ll notify you soon.');">
+      <input type="email" placeholder="Your email address" required />
       <button type="submit">Notify Me</button>
     </form>
 
-    <div class="coming-soon">Launching Soon</div>
-
-    <!-- Social Links -->
     <div class="socials">
-      <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" target="_blank">WhatsApp</a>
-      <a href="https://instagram.com/yourpage" class="instagram" target="_blank">Instagram</a>
+      <a href="https://instagram.com/metsa_essence/" target="_blank">Instagram</a>
+      <a href="https://wa.me/8273503297" target="_blank">WhatsApp</a>
     </div>
 
     <footer>

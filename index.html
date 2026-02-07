@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handcrafted Furniture | Coming Soon</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      background: linear-gradient(135deg, #f5efe6, #e7d8c9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4a3f35;
+    }
+
+    .container {
+      max-width: 650px;
+      padding: 50px 40px;
+      background: #fffaf4;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+      animation: scaleIn 1.2s ease forwards;
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #7a4a2e;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #9b7a5e;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeSlide 1.8s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .divider {
+      width: 90px;
+      height: 3px;
+      background: #c49a6c;
+      margin: 0 auto 35px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 35px;
+      color: #6b5b4f;
+    }
+
+    .coming-soon {
+      font-size: 18px;
+      letter-spacing: 4px;
+      color: #7a4a2e;
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        opacity: 0.65;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 13px;
+      color: #8b7a6b;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 40px 25px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .brand {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="brand">Handcrafted Living</div>
+
+    <div class="tagline">
+      Where Craftsmanship Meets Timeless Living
+    </div>
+
+    <div class="divider"></div>
+
+    <h1>Coming Soon</h1>
+
+    <p>
+      Discover thoughtfully designed handcrafted furniture made by skilled
+      artisans. Each piece blends tradition, quality, and modern elegance to
+      create spaces that feel truly yours.
+    </p>
+
+    <div class="coming-soon">Launching Soon</div>
+
+    <footer>
+      © 2026 Handcrafted Living. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>

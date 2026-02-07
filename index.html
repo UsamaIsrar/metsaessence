@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Metsa Essence | Handcrafted Furniture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metsa Essence — Handcrafted Furniture</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -17,140 +17,128 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f7f5f2;
-      color: #2e2a26;
-      height: 100vh;
-      display: flex;
+      background: #faf9f7;
+      color: #1f1f1f;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 32px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
       align-items: center;
-      justify-content: center;
     }
 
-    .wrapper {
-      width: 100%;
-      max-width: 720px;
-      padding: 60px 40px;
-      background: #ffffff;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
+    /* Left side */
     .brand {
       font-family: 'Playfair Display', serif;
-      font-size: 38px;
-      font-weight: 600;
-      margin-bottom: 12px;
+      font-size: 42px;
+      font-weight: 500;
+      margin-bottom: 14px;
     }
 
     .tagline {
-      font-size: 14px;
+      font-size: 13px;
       letter-spacing: 2px;
-      color: #8a7d6c;
       text-transform: uppercase;
-      margin-bottom: 36px;
-    }
-
-    .divider {
-      width: 70px;
-      height: 2px;
-      background: #c4b6a3;
-      margin: 0 auto 40px;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 44px;
-      font-weight: 500;
-      margin-bottom: 18px;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: #5f5a54;
-      max-width: 520px;
-      margin: 0 auto 40px;
-    }
-
-    .coming {
-      font-size: 15px;
-      letter-spacing: 3px;
-      color: #8a7d6c;
+      color: #7a746c;
       margin-bottom: 40px;
+    }
+
+    .description {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #3e3e3e;
+      max-width: 420px;
+      margin-bottom: 48px;
     }
 
     .notify {
       display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 35px;
+      gap: 12px;
+      margin-bottom: 28px;
     }
 
     .notify input {
+      flex: 1;
       padding: 14px 16px;
-      width: 260px;
-      border: 1px solid #d6cec3;
-      border-radius: 8px;
+      border: 1px solid #d6d2cc;
+      border-radius: 6px;
       font-size: 14px;
+      background: transparent;
     }
 
     .notify button {
       padding: 14px 22px;
-      border-radius: 8px;
-      border: none;
-      background: #2e2a26;
+      background: #1f1f1f;
       color: #ffffff;
+      border: none;
+      border-radius: 6px;
       font-size: 14px;
       cursor: pointer;
-      transition: background 0.3s ease;
     }
 
     .notify button:hover {
-      background: #1f1c19;
+      background: #000;
     }
 
-    .socials {
+    .links {
       display: flex;
-      justify-content: center;
-      gap: 18px;
-      margin-bottom: 30px;
-    }
-
-    .socials a {
-      text-decoration: none;
+      gap: 24px;
       font-size: 14px;
-      color: #2e2a26;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s ease;
     }
 
-    .socials a:hover {
-      border-color: #2e2a26;
+    .links a {
+      color: #1f1f1f;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .links a:hover {
+      border-color: #1f1f1f;
+    }
+
+    /* Right side */
+    .status {
+      text-align: right;
+    }
+
+    .status h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    .status span {
+      font-size: 14px;
+      letter-spacing: 3px;
+      color: #7a746c;
     }
 
     footer {
+      margin-top: 80px;
+      text-align: center;
       font-size: 13px;
       color: #9a948b;
     }
 
-    @media (max-width: 480px) {
-      .wrapper {
-        padding: 45px 25px;
+    /* Mobile */
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+        gap: 60px;
       }
 
-      h1 {
-        font-size: 34px;
+      .status {
+        text-align: left;
       }
 
-      .brand {
-        font-size: 30px;
+      .status h1 {
+        font-size: 42px;
       }
     }
   </style>
@@ -158,39 +146,39 @@
 
 <body>
 
-  <div class="wrapper">
-    <div class="brand">Metsa Essence</div>
+  <main class="page">
+    <!-- LEFT -->
+    <section>
+      <div class="brand">Metsa Essence</div>
+      <div class="tagline">Where Craftsmanship Meets Timeless Living</div>
 
-    <div class="tagline">
-      Where Craftsmanship Meets Timeless Living
-    </div>
+      <p class="description">
+        Metsa Essence creates thoughtfully handcrafted furniture shaped by
+        skilled artisans. Rooted in tradition and refined for contemporary
+        living, each piece is designed to last beyond trends.
+      </p>
 
-    <div class="divider"></div>
+      <form class="notify" onsubmit="event.preventDefault(); alert('Thank you. We will notify you soon.');">
+        <input type="email" placeholder="Email address" required />
+        <button type="submit">Notify Me</button>
+      </form>
 
-    <h1>Coming Soon</h1>
-
-    <p>
-      Metsa Essence brings thoughtfully handcrafted furniture shaped by skilled
-      artisans. Each piece is rooted in tradition and refined for contemporary
-      living.
-    </p>
-
-    <div class="coming">Launching Soon</div>
-
-    <form class="notify" onsubmit="event.preventDefault(); alert('Thank you! We’ll notify you soon.');">
-      <input type="email" placeholder="Your email address" required />
-      <button type="submit">Notify Me</button>
-    </form>
-
-    <div class="socials">
-      <a href="https://instagram.com/metsa_essence/" target="_blank">Instagram</a>
+      <div class="links">
+        <a href="https://instagram.com/metsa_essence/" target="_blank">Instagram</a>
       <a href="https://wa.me/8273503297" target="_blank">WhatsApp</a>
-    </div>
+      </div>
+    </section>
 
-    <footer>
-      © 2026 Metsa Essence. All rights reserved.
-    </footer>
-  </div>
+    <!-- RIGHT -->
+    <section class="status">
+      <h1>Coming Soon</h1>
+      <span>Launching Soon</span>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Metsa Essence. All rights reserved.
+  </footer>
 
 </body>
 </html>
